@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #4f3aff, #ff579a);
+    color: white;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+}
+.logo span {
+    color: #00eaff;
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #00eaff;
+}
+
+/* HAMBURGER BUTTON */
+.menu-btn {
+    display: none;
+    font-size: 32px;
+    color: #00eaff;
+    cursor: pointer;
+}
+
+/* ---------- MOBILE NAV ---------- */
+@media (max-width: 900px) {
+    nav {
+        position: absolute;
+        top: 75px;
+        right: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+        background: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    padding-left: 60px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.hero span {
+    color: #00eaff;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 12px 30px;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00eaff;
+    color: black;
+}
+
+/* HERO MOBILE */
+@media (max-width: 768px) {
+    .hero {
+        padding: 120px 20px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* ---------------- SECTIONS ---------------- */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+/* ABOUT */
+.about {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+.highlight {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* ---------------- SKILLS GRID ---------------- */
+.skills {
+    padding: 40px 30px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 18px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ---------------- PROJECTS ---------------- */
+.projects {
+    padding: 40px 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ---------------- CERTIFICATIONS ---------------- */
+.certifications {
+    padding: 40px 30px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    padding: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    color: white;
+    text-decoration: none;
+    border-left: 4px solid #00eaff;
+}
+.cert-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.3);
+}
+
+.cert-card h3 {
+    color: #00eaff;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contact-section {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.left {
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left h2 {
+    text-align: center;
+    color: #00eaff;
+}
+
+.inputs,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.85);
+    font-size: 15px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #00eaff;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #009ac0;
+    color: white;
+}
+
+/* -------------- MOBILE FIX -------------- */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 18px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .profile-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+}
